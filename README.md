@@ -37,7 +37,26 @@
 4. Введите команду `repair_all` или `repairall`
 5. Нажмите Enter
 
-Все поврежденные предметы в вашем инвентаре будут мгновенно починены до 100% состояния!
+Для компиляции мода InstantRepair вам нужно добавить следующие зависимости:
+
+## 1. **MelonLoader зависимости** (из папки `\MelonLoader\net6\`):
+- `MelonLoader.dll`
+- `0Harmony.dll` 
+- `Il2CppInterop.Runtime.dll`
+- `Il2CppInterop.Common.dll`
+
+## 2. **Il2Cpp игровые сборки** (из папки `\MelonLoader\Il2CppAssemblies\`):
+- `Assembly-CSharp.dll` - основная сборка игры
+- `Il2Cppmscorlib.dll` - базовые типы
+- `Il2CppSystem.dll` - системные типы для коллекций
+- `UnityEngine.dll` - базовый Unity
+- `UnityEngine.CoreModule.dll` - ядро Unity
+
+## 3. **Дополнительные зависимости** (могут понадобиться):
+Если при компиляции будут ошибки, добавьте также:
+- `UnityEngine.AudioModule.dll` - для звуков
+- `UnityEngine.UI.dll` - для UI элементов
+- `Il2CppSystem.Core.dll` - дополнительные системные типы
 
 ## Известные проблемы
 - Команда работает только в режиме выживания (Survival)
